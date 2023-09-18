@@ -1,0 +1,110 @@
+<html>
+    <head>
+       <title>
+        <%= title %>
+       </title>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+       <link rel="stylesheet" href="/css/home.css">
+    
+       
+    </head>
+    <body>
+        <div class="border">
+            <div class="heading">
+                <i class="fa-solid fa-list-check fa-2xl" style="margin-right: 2vw;"></i>
+                <h1>WORK MANAGEMENT SYSTEM</h1>
+
+            </div>
+            <!-- <b style="font-family: sans-serif;">coloe will indicates the importance of work</b> -->
+            <h2 class="moving-text">Enter your List of actions today</h2>
+            <form action="/create-list" method="post">
+                <div class="description">
+                    <b>description :-</b><br>
+                    <textarea name="description" id="dis" cols="100%" rows="4" placeholder="Write your descriptin here like what type of task...." required></textarea>
+                </div>
+                <div class="cat_date">
+                    <div class="category">
+                        <b>Category :-</b>
+                        <br>
+                        <label for="categories">select</label>
+                        <select id="categories" name="category" class="cate">
+                            <option value="Personal">Personal</option>
+                            <option value="School">School</option>
+                            <option value="Games">Games</option> 
+                            <option value="Food">Food</option> 
+                            <option value="Wake up">Wake up</option> 
+                          </select> 
+                           <!-- <input list="categories" name="category" id="category" placeholder="Select Category" required> -->
+                           <!-- <datalist id="categories">
+                             <option value="Personal">
+                             <option value="School">
+                             <option value="Games">
+                             <option value="Food">
+                             <option value="Wake up">
+                           </datalist> -->
+                    </div>
+                    
+                    <div class="date">
+                        <b>Date :-</b><br>
+                        <input type="date" name="date" required>
+                    </div>
+                </div>
+                <div class="buttons">
+                         <button type="button" id="but" class="button" style="background-color: red;"> 
+
+                            <label for="cars">Importance</label>
+                                <select id="colors" name="color" class="co">
+                                  <option value="red">red</option>
+                                  <option value="gold">gold</option>
+                                  <option value="green">green</option> 
+                                </select> 
+                         </button>
+                            <!-- <label for="colors">select</label>
+                           <input list="colors" name="color" id="color" placeholder="select color" required>
+                           <select id="colors">
+                             <option value="red">
+                             <option value="green">
+                             <option value="gold">
+                             
+                             </select> -->
+                    
+                        <button type="submit" class="button" ><i class="fa-sharp fa-xl fa-solid fa-plus"></i> &nbsp; &nbsp;<b>Add</b></button>
+
+
+                </div>
+                
+            
+            </form>
+            <div class="tasks">
+                <div class="task-heading">
+                    <h2>Daily tasks:-</h2>
+                    <a href="/viewall" class="viewall">view all...</a>
+                </div>
+                    
+                    <%for(let i of contactList){%>
+                       <div class="dailytask">
+                        <div class="delecte">
+                            <a href="/delete-list/?id=<%=i._id%>"><i class="fa-solid fa-trash"></i></a>
+                        </div>
+                        
+                        <div class="dis_date">
+                            <b><%=i.description%></b>
+                            <p><%=i.date%></p>
+                            <!-- <p><%=i.category%></p> -->
+                            
+                        </div>
+                        <%const c = i.color%>
+                        <button type="button" style="background-color: <%= c %>;"><%= i.category %></button>
+
+                       </div>
+                    <%}%>
+                    
+                    
+                
+            </div>
+
+        </div>
+        <script type="text/javascript" src="/js/home.js"></script>
+        
+    </body>
+</html>

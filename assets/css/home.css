@@ -1,0 +1,191 @@
+body{
+ /* max-height: 900px; */
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size:cover;
+    /* background-color: rgb(236, 239, 241); */
+}
+.border{
+    height:auto;
+    width:70vw;
+    border: 2px solid black;
+    margin: 0;
+    /* background-color: rgb(223, 227, 231); */
+    max-height: 1050px; 
+    overflow:hidden;
+    border-radius: 10px;
+}
+.heading{
+    display: flex;
+    /* border: 2px solid black; */
+    align-items: center;
+    justify-content: center;
+}
+.heading h1{
+    text-shadow: 1px 1px 2px rgb(101, 66, 66);
+    
+}
+.moving-text{
+    position: relative;
+    animation: movingText 15s linear infinite ;
+    color: black;
+    text-shadow: 2px 2px 5px rgb(101, 66, 66);
+    margin: 0;
+
+}
+@keyframes movingText {
+    0%, 100% {
+        left: 0;
+        
+        
+    }
+    
+    50%{
+        left: calc(100% - 325px);
+    
+    }
+   
+}
+.description{
+    border: 2px solid black;
+    outline: 2px solid rgb(103, 132, 5);
+    height: 90px;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.description:hover{
+    box-shadow: 5px 5px 5px rgb(87, 14, 14);;
+}
+.description textarea{
+    background: none;
+    height: 78%;
+    width: 100%;
+    border: none;
+    resize: none; /* Prevent resizing of the textarea */
+    outline: none
+}
+.cat_date{
+    margin-top: 1%;
+    height: 90px;
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    border: 2px solid black;
+    outline: 2px solid rgb(103, 132, 5);
+    border-radius: 5px;
+    background: none;
+
+}
+.cat_date:hover{
+    box-shadow: 5px 5px 5px rgb(87, 14, 14);;
+}
+.category {
+    height: 100%;
+    width: 50%;
+    
+}
+
+
+.date{
+    height: 100%;
+    width: 50%;
+}
+.date input{
+    width: 90%;
+    margin-left: 5%;
+    background: none;
+}
+.buttons{
+    height: 90px;
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.buttons .button{
+    height: 40%;
+    width: 30%;
+    margin: 1%;
+
+}
+
+.task-heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5%;
+    margin: 0;
+    
+}
+.task-heading h2{
+    margin: 0;
+}
+.task-heading a{
+    text-decoration: none;
+    color: black;
+    margin: 0;
+}
+.dailytask{
+    height:90px;
+    width: 90%;
+    border: 2px solid black;
+    /* margin-left: 5%; */
+    margin: 4%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.dailytask:hover{
+    
+    box-shadow: 2px 2px 5px rgb(73, 69, 73);;
+}
+.co{
+    background: none;
+}
+.cate{
+    height: 25px;
+    border-radius: 5px;
+    background: none;
+}
+.viewall{
+    border: 2px solid black;
+    background-color: beige;
+    border-radius: 5px ;
+    padding: 5px;
+}
+.dailytask .delecte{
+    margin: 5%;
+}
+.dailytask .dis_date{
+    width: 70%;
+    margin-left: 5%;
+    /* overflow: auto;
+    max-width: 70%;
+    max-height: 10%; */
+}
+.dailytask button{
+    margin-left: 5%;
+    height: 40px;
+    width: 90px; 
+    background: none;  
+}
+.button{
+    background-color: cadetblue;
+    
+}
+.button:hover{
+    height: 42%;
+    width: 33%;
+    text-shadow: 2px 2px 5px rgb(101, 66, 66);
+   box-shadow: 2px 2px 5px rgb(101, 66, 66);;
+    
+}

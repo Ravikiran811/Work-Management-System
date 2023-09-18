@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/list.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    </head>
+    <body>
+        <div class="alltasks">
+            <div class="task-heading">
+                <i class="fa-solid fa-list-check fa-2xl" style="margin-right: 2vw;"></i>
+                <h2>Daily tasks:-</h2>
+            </div>
+
+                <!-- it will iterates from database and print the associate details -->
+                <%for(let i of contactList){%>
+                   <div class="dailytask">
+                    <div class="delecte">
+                        <a href="/delete-list/?id=<%=i._id%>"><i class="fa-solid fa-xl fa-trash"></i></a>
+                    </div>
+                    
+                    <div class="dis_date">
+                        <p><%=i.description%></p>
+                        <p><%=i.date%></p>
+                        <!-- <p><%=i.category%></p> -->
+                    </div>
+                    <!-- constant is used to change the color of te category -->
+                    <%const c = i.color%>
+                        <button type="button" class="category" style="background-color: <%= c %>;"><%= i.category %></button>
+                   </div>
+                <%}%>
+                
+                
+            
+        </div>
+    </body>
+</html>
